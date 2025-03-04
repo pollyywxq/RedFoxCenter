@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навчальний Центр - Головна</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="redfox.js" defer></script> 
+    <style>
+           /* Стилі для картинки внизу після послуг */
+           .service-image {
+            margin-top: -10px;
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Додаємо заголовок RedFox з зображенням -->
+        <div class="redfox-header">
+            Red
+            <img src="redfox.jpg" onerror="this.onerror=null; this.src='redfox.png';" alt="redfox logo">
+            Fox
+        </div>
+        <!-- Додаємо заголовок "Навчальний Центр" -->
+        <h1>Навчальний Центр</h1>
+    </header>    
+    <nav>
+        <a href="redfox.html">Головна</a>
+        <a href="bonuses.html">Бонуси</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+    <div class="container">
+        <!-- Блок "Заняття offline" -->
+        <div class="offline-section">
+            <p>Заняття offline</p>
+        </div>
+        <section id="services" class="services">
+            <h2>Наші Послуги</h2>
+            <ul>
+                <li onclick="toggleInfo(this)">
+                    📚 Підготовка до школи дітей 5-6 років 
+                    <div class="service-info">2 рази на тиждень (по 2 заняття по 40 хв)<br>2400 грн / місяць (8 занять і 9-те безкоштовне)</div>
+                </li>
+                <li onclick="toggleInfo(this)">
+                    🎨 Англійська для дошкільнят 5-6 років
+                    <div class="service-info">1 раз на тиждень, 50 хв<br>1000 грн / місяць (4 заняття, 5-те безкоштовне)</div>
+                </li>
+                <li onclick="toggleInfo(this)">
+                    📖 Англійська мова для 1-9 класів
+                    <div class="service-info">2 рази на тиждень, 55 хв<br>2240 грн / місяць</div>
+                </li>
+                <li onclick="toggleInfo(this)">
+                    📝 Підготовка до ЄВІ (магістратура)
+                    <div class="service-info">2 рази на тиждень, по 90 хв<br>2960 грн / місяць</div>
+                </li>
+                <li onclick="toggleInfo(this)">
+                    🔢 Підготовка до НМТ (англійська, українська мова, математика, історія)
+                    <div class="service-info">2 рази на тиждень, по 60 хв<br>2400 грн / місяць</div>
+                </li>
+                <li onclick="toggleInfo(this)">
+                    ⏳ Експрес підготовка до НМТ 2025 року
+                    <div class="service-info">2 рази на тиждень, по 120 хв<br>3200 грн / місяць</div>
+                </li>
+                <li onclick="toggleInfo(this)">
+                    🎓 Англійська для дорослих
+                    <div class="service-info">2 рази на тиждень, по 75 хв<br>2400 грн / місяць</div>
+                </li>
+            </ul>
+        </section>
+            
+    </div>
+     <!-- Додаємо картинку після секції послуг -->
+     <img src="58_main-v1722875600.jpg" alt="58_main-v1722875600.jpg" class="service-image">
+    </div>
+    <footer>
+        <p class="footer-title">&copy;Навчальний центр RedFox (Харків)</p>
+        <p class="footer-contacts">
+            Контакти:    
+            📞+38 (096) 649 86 47     
+            📞+38 (075) 370 11 67 - Анна
+        </p>
+    </footer>
+</body>
+</html>
