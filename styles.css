@@ -202,7 +202,7 @@ nav {
     max-width: 800px; /* Максимальна ширина */
     text-align: center; /* Центрування тексту */
     margin-top: -20px; /* Зсув вгору */
-    margin-left: -38px; /* Зсув вліво */
+    margin-left: 0px; /* Зсув вліво */
 }
 .contact {
     margin-bottom: 40px;
@@ -214,7 +214,7 @@ nav {
     max-width: 800px; /* Максимальна ширина */
     text-align: center; /* Центрування тексту */
     margin-top: -20px; /* Зсув вгору */
-    margin-left: -38px; /* Зсув вліво */
+    margin-left: 0px; /* Зсув вліво */
 }
 /* Стилі для навігаційного меню */
 nav {
