@@ -1,6 +1,120 @@
 /* Підключення красивого шрифту з Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Базові стилі */
+:root {
+    --primary-color: #ff4500;
+    --secondary-color: #ff6f61;
+    --background-color: #e95920;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+/* Загальні стилі для адаптивності */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Адаптивні медіа-запити */
+@media screen and (max-width: 768px) {
+    /* Адаптивний заголовок */
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .redfox-header {
+        font-size: 1.2rem;
+    }
+
+    /* Адаптивне меню */
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        margin: 0 5px;
+    }
+
+    /* Адаптивний контейнер */
+    .container {
+        padding: 10px;
+    }
+
+    /* Адаптивні секції */
+    .services, .bonuses, .contact {
+        width: 95%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    /* Адаптивні списки */
+    ul li {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* Адаптивний футер */
+    footer {
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    footer .footer-title {
+        font-size: 0.8rem;
+    }
+
+    footer .footer-contacts {
+        font-size: 0.7rem;
+    }
+}
+
+/* Додаткові медіа-запити для дуже малих екранів */
+@media screen and (max-width: 480px) {
+    /* Ще менший заголовок */
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .redfox-header {
+        font-size: 1rem;
+    }
+
+    /* Вертикальне меню для малих екранів */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+        width: 80%;
+    }
+
+    /* Оптимізація контенту */
+    .services h2, .bonuses h2, .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .service-info {
+        font-size: 0.8rem;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -445,5 +559,57 @@ height: 0; /* Лінія зникає при наведенні */
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Оновлені стилі для зображень */
+.service-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Адаптивні стилі для offline-section */
+@media screen and (max-width: 768px) {
+    .offline-section {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .offline-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Адаптивні стилі для motivation-section */
+@media screen and (max-width: 768px) {
+    .motivation-section {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .motivation-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Покращення доступності для сенсорних пристроїв */
+@media (hover: none) {
+    nav a:hover,
+    ul li:hover,
+    .offline-section:hover,
+    .motivation-section:hover {
+        transform: none;
+    }
+
+    nav a:active,
+    ul li:active,
+    .offline-section:active,
+    .motivation-section:active {
+        background-color: var(--secondary-color);
+        transform: scale(0.98);
     }
 }
