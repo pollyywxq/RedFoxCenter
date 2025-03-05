@@ -1,6 +1,120 @@
 /* Підключення красивого шрифту з Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Базові стилі */
+:root {
+    --primary-color: #ff4500;
+    --secondary-color: #ff6f61;
+    --background-color: #e95920;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+/* Загальні стилі для адаптивності */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Адаптивні медіа-запити */
+@media screen and (max-width: 768px) {
+    /* Адаптивний заголовок */
+    header {
+        padding: 30px 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .redfox-header {
+        font-size: 1.2rem;
+    }
+
+    /* Адаптивне меню */
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        margin: 0 5px;
+    }
+
+    /* Адаптивний контейнер */
+    .container {
+        padding: 10px;
+    }
+
+    /* Адаптивні секції */
+    .services, .bonuses, .contact {
+        width: 95%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    /* Адаптивні списки */
+    ul li {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* Адаптивний футер */
+    footer {
+        padding: 10px 0;
+        width: 100%;
+        height: auto;
+    }
+
+    footer .footer-title {
+        font-size: 0.8rem;
+    }
+
+    footer .footer-contacts {
+        font-size: 0.7rem;
+    }
+}
+
+/* Додаткові медіа-запити для дуже малих екранів */
+@media screen and (max-width: 480px) {
+    /* Ще менший заголовок */
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .redfox-header {
+        font-size: 1rem;
+    }
+
+    /* Вертикальне меню для малих екранів */
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+        width: 80%;
+    }
+
+    /* Оптимізація контенту */
+    .services h2, .bonuses h2, .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .service-info {
+        font-size: 0.8rem;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -14,7 +128,6 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
-
 /* Стилі для заголовка */
 header {
     background: linear-gradient(45deg, #ff6f61, #ff4500); /* Градієнтний фон */
@@ -25,7 +138,6 @@ header {
     position: relative;
     overflow: hidden; /* Щоб хвиля не виходила за межі */
 }
-
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem; /* Збільшений розмір тексту */
@@ -36,7 +148,6 @@ header h1 {
     position: relative;
     z-index: 1; /* Щоб текст був поверх хвилі */
 }
-
 /* Хвиля внизу заголовка */
 header::after {
     content: '';
@@ -49,13 +160,11 @@ header::after {
     background-size: cover;
     animation: wave 10s linear infinite; /* Анімація хвилі */
 }
-
 .redfox-header img {
     height: 1.2em;
     margin: 0 10px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }
-
 nav {
     background-color: #ff4500; /* Яскраво-червоний */
     padding: 15px 0;
@@ -63,7 +172,6 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
-
 /* Централізація всіх блоків */
 .container {
     padding: 20px;
@@ -74,7 +182,6 @@ nav {
     flex-direction: column;
     align-items: center; /* Центрування блоків по горизонталі */
 }
-
 .services {
     margin-bottom: 40px;
     background-color: white;
@@ -85,7 +192,6 @@ nav {
     max-width: 800px; /* Максимальна ширина */
     text-align: center; /* Центрування тексту */
 }
-
 .bonuses {
     margin-bottom: 40px;
     background-color: white;
@@ -98,7 +204,6 @@ nav {
     margin-top: -20px; /* Зсув вгору */
     margin-left: -38px; /* Зсув вліво */
 }
-
 .contact {
     margin-bottom: 40px;
     background-color: white;
@@ -111,7 +216,6 @@ nav {
     margin-top: -20px; /* Зсув вгору */
     margin-left: -38px; /* Зсув вліво */
 }
-
 /* Стилі для навігаційного меню */
 nav {
     background-color: #ff4500; /* Яскраво-червоний фон */
@@ -123,7 +227,6 @@ nav {
     top: 0;
     z-index: 1000; /* Щоб меню було поверх інших елементів */
 }
-
 nav a {
     color: white;
     padding: 10px 20px;
@@ -134,7 +237,6 @@ nav a {
     position: relative;
     margin: 0 10px; /* Відступи між посиланнями */
 }
-
 /* Ефект при наведенні на посилання */
 nav a:hover {
     background-color: #ff6f61; /* Кораловий колір при наведенні */
@@ -142,7 +244,6 @@ nav a:hover {
     transform: translateY(-3px); /* Підняття посилання вгору */
     box-shadow: 0 4px 8px rgba(255, 69, 0, 0.2); /* Тінь при наведенні */
 }
-
 /* Підкреслення посилання при наведенні */
 nav a::after {
     content: '';
@@ -155,30 +256,25 @@ nav a::after {
     transform: scaleX(0); /* Спочатку лінія невидима */
     transition: transform 0.3s ease; /* Плавний перехід */
 }
-
 nav a:hover::after {
     transform: scaleX(1); /* Лінія з'являється при наведенні */
 }
-
 /* Активне посилання (поточна сторінка) */
 nav a.active {
     background-color: #ff6f61; /* Кораловий колір для активної сторінки */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(255, 69, 0, 0.2); /* Тінь для активної сторінки */
 }
-
 h2 {
     color: #ff4500; /* Яскраво-червоний для заголовків */
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     margin-bottom: 20px;
 }
-
 ul {
     list-style: none;
     padding: 0;
 }
-
 ul li {
     background-color: #fff5f5;
     margin: 10px 0;
@@ -188,12 +284,10 @@ ul li {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1.2em; /* Робимо розмір таким самим */
 }
-
 ul li:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 footer {
     background-color: #ffffff; /* Білий фон */
     color: #ff4500; /* Червоний колір тексту */
@@ -211,23 +305,19 @@ footer {
     justify-content: center;
     flex-direction: column; /* Вирівнювання тексту по вертикалі */
 }
-
 footer p {
     margin: 0; /* Видаляємо зовнішні відступи */
     line-height: 1.2; /* Збільшуємо міжрядковий інтервал */
 }
-
 footer .footer-title {
     font-size: 0.7rem; /* Збільшений розмір шрифту для заголовка */
     font-weight: bold; /* Жирний текст */
     margin-bottom: 5px; /* Відступ знизу */
 }
-
 footer .footer-contacts {
     font-size: 0.6rem; /* Менший розмір шрифту для контактів */
     color: #000000; /* Темний колір для контактів */
 }
-
 .image-section img {
     max-width: 100%;
     height: auto;
@@ -236,14 +326,12 @@ footer .footer-contacts {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .contact h2 {
     color: #ff4500; /* Яскраво-червоний для заголовків */
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     margin-bottom: 20px;
 }
-
 .contact p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -254,16 +342,13 @@ footer .footer-contacts {
     border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
 .contact p:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка червонувата тінь */
 }
-
 .contact p:last-child {
     margin-bottom: 0;
 }
-
 /* Акцент на "Чекаємо за адресою" */
 .contact p strong {
     font-size: 1.3rem; /* Збільшений розмір шрифту */
@@ -274,7 +359,6 @@ footer .footer-contacts {
     text-transform: uppercase; /* Великі літери для акценту */
     letter-spacing: 1px; /* Відстань між літерами */
 }
-
 /* Стилі для блоку "Заняття offline" */
 .offline-section {
     background: rgba(255, 255, 255, 0.9); /* Напівпрозорий білий фон */
@@ -298,20 +382,17 @@ footer .footer-contacts {
     border: 2px solid #ff6f61; /* Коралова рамка */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .offline-section p {
     font-size: 1.3rem; /* Збільшений розмір шрифту */
     font-weight: bold; /* Жирний текст */
     margin: 0;
 }
-
 /* Іконка для блоку */
 .offline-section::before {
     content: "🎓"; /* Іконка (можна замінити на зображення) */
     font-size: 1.5rem;
     color: #f05d50; /* Кораловий колір для іконки */
 }
-
 /* Додатковий ефект при наведенні */
 .offline-section:hover {
     transform: translateY(-2px); /* Невелике підняття */
@@ -331,7 +412,6 @@ footer .footer-contacts {
         height: 1em; /* Висота зображення відповідає висоті тексту */
         margin: 0 10px; /* Відступи зліва і справа від зображення */
     }
-
    /* Стилі для мотиваційного тексту */
 .motivation-section {
 background-color: #fff5f5; /* М'який кораловий фон */
@@ -349,13 +429,11 @@ margin-bottom: 40px; /* Додатковий відступ знизу */
 text-align: center; /* Центрування тексту */
 transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід для ефектів */
 }
-
 /* Ефект при наведенні */
 .motivation-section:hover {
 transform: translateY(-5px); /* Підняття блоку вгору */
 box-shadow: 0 8px 12px rgba(255, 69, 0, 0.2); /* Тінь з червонуватим відтінком */
 }
-
 /* Анімація для тексту */
 .motivation-section p {
 font-size: 1rem;
@@ -363,30 +441,25 @@ line-height: 1.5;
 margin: 0;
 transition: color 0.3s ease; /* Плавна зміна кольору тексту */
 }
-
 /* Ефект при наведенні на текст */
 .motivation-section:hover p {
 color: #ff4500; /* Червоний колір тексту при наведенні */
 }
-
 /* Акцент на ключові слова */
 .motivation-section p strong {
 color: #ff4500; /* Червоний колір для акценту */
 font-weight: bold;
 transition: color 0.3s ease; /* Плавна зміна кольору */
 }
-
 /* Ефект при наведенні на ключові слова */
 .motivation-section:hover p strong {
 color: #e95920; /* Темніший кораловий колір при наведенні */
 }
-
 /* Анімація для коралової лінії зліва */
 .motivation-section {
 position: relative;
 overflow: hidden; /* Щоб лінія не виходила за межі блоку */
 }
-
 .motivation-section::before {
 content: '';
 position: absolute;
@@ -397,7 +470,6 @@ height: 100%;
 background-color: #ff6f61; /* Кораловий колір лінії */
 transition: height 0.3s ease; /* Плавна зміна висоти лінії */
 }
-
 /* Ефект при наведенні на лінію */
 .motivation-section:hover::before {
 height: 0; /* Лінія зникає при наведенні */
@@ -407,7 +479,6 @@ height: 0; /* Лінія зникає при наведенні */
     padding: 0;
     margin: 0;
 }
-
 .services li {
     cursor: pointer;
     padding: 15px;
@@ -415,12 +486,10 @@ height: 0; /* Лінія зникає при наведенні */
     font-size: 1.2em;
     transition: background-color 0.3s ease, padding-left 0.3s ease;
 }
-
 .services li:hover {
     background-color: #f0f0f0;
     padding-left: 20px;
 }
-
 .service-info {
     display: none;
     padding: 15px;
@@ -431,12 +500,10 @@ height: 0; /* Лінія зникає при наведенні */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
-
 .services li.active + .service-info {
     display: block;
     animation: fadeIn 0.5s ease-in-out;
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -445,5 +512,58 @@ height: 0; /* Лінія зникає при наведенні */
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+}
+
+/* Оновлені стилі для зображень */
+.service-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Адаптивні стилі для offline-section */
+@media screen and (max-width: 768px) {
+    .offline-section {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .offline-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Адаптивні стилі для motivation-section */
+@media screen and (max-width: 768px) {
+    .motivation-section {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .motivation-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Покращення доступності для сенсорних пристроїв */
+@media (hover: none) {
+    nav a:hover,
+    ul li:hover,
+    .offline-section:hover,
+    .motivation-section:hover {
+        transform: none;
+    }
+
+    nav a:active,
+    ul li:active,
+    .offline-section:active,
+    .motivation-section:active {
+        background-color: var(--secondary-color);
+        transform: scale(0.98);
     }
 }
