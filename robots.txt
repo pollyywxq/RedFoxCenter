@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://red-fox-center.vercel.app/sitemap.xml
